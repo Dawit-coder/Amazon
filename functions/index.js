@@ -8,7 +8,7 @@ dotenv.config();
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const app = express();
-app.use(cors({origin:true}))
+app.use(cors({origin:true})) //Enabling cors
 
 app.use(express.json())
 
@@ -39,4 +39,4 @@ app.post("/payment/create", async (req, res) => {
 
 });  
 
-exports.api = onRequest(app)
+exports.api = onRequest(app)  //Export the app as a firebase function
