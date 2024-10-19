@@ -39,9 +39,9 @@ function Cart() {
           <hr />
           {
             basket?.length==0?( <p>opps! No item in your cart.</p> ):(
-              basket?.map((item, i)=>{
-                return <section className={classes.cart_product}>
-          <ProductCard key={item.id} product={item} renderDesc={true} flex={true} renderAdd={false} />
+              basket?.map((item, index)=>{
+                return <section key={index} className={classes.cart_product}>
+          <ProductCard product={item} renderDesc={true} flex={true} renderAdd={false} />
             <div className={classes.btn_container}>
               <button className={classes.btn} onClick={()=>increment(item)}><IoIosArrowUp size={20} /></button>
               <span>{item.amount}</span>
