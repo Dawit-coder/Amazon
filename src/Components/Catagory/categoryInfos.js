@@ -22,7 +22,7 @@ export const catagoryInfo = [
         ]
     },
     {
-        title: "jewelery",
+        title: "Jewelry",
         names:"jewelery",
         products: [
             {
@@ -79,11 +79,11 @@ export const catagoryInfo = [
             },
             {
                 name: "Femme Flair",
-                image: 'https://m.media-amazon.com/images/I/512w1rmOe2L._AC_UL320_.jpg'
+                image: 'https://m.media-amazon.com/images/I/51y76K2J2lL._AC_UL320_.jpg'
             },
             {
                 name: "VogueVibe",
-                image: 'https://m.media-amazon.com/images/I/7183-44GLuS._AC_UL320_.jpg'
+                image: 'https://m.media-amazon.com/images/I/51g588Vv61L._AC_UL320_.jpg'
             },
         ]
     },

@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Payment() {
 
-  const [{user, basket}] = useContext(DataContext)
+  const [{user, basket}, dispatch] = useContext(DataContext)
   // console.log(user.email)
   const [processing, setProcessing] = useState(false)
   const totalItem = basket?.reduce((amount, item)=>{
@@ -65,7 +65,8 @@ function Payment() {
           amount: paymentIntent.amount,
           created: paymentIntent.created,
         })
-
+    // Empty basket
+      dispatch({ type : Type.EMPTY_BASKET})
       navigate("/orders", {state:{msg:"you have placed in order"}})
       setProcessing(false)
     } catch (error) {
