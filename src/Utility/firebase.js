@@ -1,9 +1,7 @@
 // Import the functions you need from the SDKs you need
-import firebase from "firebase/compat/app";
-import { getAuth } from "firebase/auth";
-import "firebase/compat/firestore";
-import "firebase/compat/auth";
-
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore'; // Import Firestore from the modular SDK
 
 const firebaseConfig = {
   apiKey: "AIzaSyBjTk9lI5kZUe-T6PHyM8bjYgQj2uYJQio",
@@ -15,6 +13,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig); // Correctly initialize Firebase
+
+// Get Auth and Firestore instances
 export const auth = getAuth(app);
-export const db = app.firestore();
+export const db = getFirestore(app); // Use the modular Firestore method
